@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mermaid Diagram - Flowchart Gerak Peluru</title>
+    <!-- Menghubungkan Mermaid.js dari CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            mermaid.initialize({ startOnLoad: true });
+        });
+    </script>
+</head>
+<body>
+    <h1>Flowchart Perhitungan Jarak Mendatar Peluru</h1>
+    <!-- Menyisipkan Diagram Mermaid -->
+    <div class="mermaid">
+        %%{init: {"themeVariables": { "flowchart.backgroundColor": "#ffffff" }}}%%
+        flowchart TD
+    A[Mulai Program] --> B[Input Kecepatan Awal ]
+    B --> C{v0 > 0?}
+    C -- Ya --> D[Input Jumlah Jarak Sasaran ]
+    C -- Tidak --> B
+    D --> E{n > 0?}
+    E -- Ya --> F[Input Daftar Jarak]
+    E -- Tidak --> D
+    F --> G[Hitung Sudut Lontar]
+    G --> H{Sudut Valid?}
+    H -- Ya --> I[Tampilkan Hasil]
+    H -- Tidak --> I
+    I --> J[Buat Grafik]
+    J --> K{Hitung Lagi?}
+    K -- Ya --> B
+    K -- Tidak --> L[Selesai]
+
+
+
+
+    </div>
+</body>
+</html>
